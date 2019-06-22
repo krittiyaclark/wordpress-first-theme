@@ -1,38 +1,11 @@
-// var gulp = require('gulp');
+import gulp from 'gulp'
+import yargs from 'yargs'
 
-// gulp.task('default', defaultTask);
-  
-// function defaultTask(cb) {
-//     console.log('Hey');
-//     cb();
-// }
-
-// gulp.task('hello', function(cb) {
-//     console.log('hello');
-//     cb();
-// })
-  
-// // function defaultTask(cb) {
-// //     // place code for your default task here
-// //     console.log('hey')
-// //     cb();
-// //   }
-  
-// //   exports.default = defaultTask
-  
-// //   function hello(hello) {
-// //     // place code for your default task here
-// //     console.log('hello')
-// //     hello();
-// //   }
-  
-// //   exports.hello = hello
-
-import gulp from 'gulp';
+const PRODUCTION = yargs.argv.prod
 
 export const hello = (done) => {
-    console.log('hello')
+    console.log(PRODUCTION)
     done();
 }
 
-export default hello;
+export default hello
