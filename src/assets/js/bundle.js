@@ -1,4 +1,10 @@
+// import 'jquery'
 import './components/slider'
+import $ from 'jquery' // Include jQuery
 
-let i = 9;
-console.log(i)
+// Include jQuery
+// const $ = jQuery;
+
+$('body').click(() =>
+    alert(true)
+)
