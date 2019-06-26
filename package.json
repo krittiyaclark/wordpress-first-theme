@@ -37,5 +37,7 @@
     "webpack-stream": "^5.2.1",
     "yargs": "^13.2.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vinyl-named": "^1.1.0"
+  }
 }
