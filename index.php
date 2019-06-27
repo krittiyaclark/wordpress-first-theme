@@ -15,6 +15,7 @@
             <?php _themename_readmore_link(); ?>
         <?php } ?>
         <?php the_posts_pagination(); ?>
+        <?php do_action('_themename_after_pagination'); ?>
 <?php } else { ?> 
     <p>Sorry, no posts matched your criteria.</p>
 <?php } ?>
