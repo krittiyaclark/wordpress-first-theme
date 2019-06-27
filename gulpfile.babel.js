@@ -32,7 +32,7 @@ const paths = {
         dest: 'dist/assets/js'
     },
     other: {
-        src: ['src/assets/**/*', '!src/assets/{images,js,scss}', '!src/aseets/{images,jsscss}/**/*'],
+        src: ['src/assets/**/*', '!src/assets/{images,js,scss}', '!src/assets/{images,js,scss}/**/*'],
         dest: 'dist/assets'
     },
     package: {

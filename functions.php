@@ -31,7 +31,7 @@ function no_post_text($text) {
 
 add_filter( '_themename_no_posts_text', 'no_posts_text' );
 
-function filter_title($filter) {
+function filter_title($title) {
     return 'Filtered' .$title;
 }
 
