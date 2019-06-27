@@ -24,4 +24,17 @@ function function_to_add($query) {
     }
 }
 
+// Core & Custom Filter Hooks
+function no_post_text($text) {
+    return esc_html__('No Posts', 'test-child');
+}
+
+add_filter( '_themename_no_posts_text', 'no_posts_text' );
+
+function filter_title($filter) {
+    return 'Filtered' .$title;
+}
+
+add_filter( 'the_title', 'filter_title' );
+
 ?>
