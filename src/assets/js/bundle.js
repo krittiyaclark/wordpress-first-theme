@@ -5,6 +5,6 @@ import $ from 'jquery' // Include jQuery
 // Include jQuery
 // const $ = jQuery;
 
-$('body').click(() =>
-    alert(true)
-)
+// $('body').click(() =>
+//     alert(true)
+// )
