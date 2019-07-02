@@ -1,5 +1,4 @@
 <article <?php post_class('c-post u-margin-bottom-20'); ?>>
-    <?php the_post(); ?>
     <h2 class="c-post__title">
         <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
     </h2>
