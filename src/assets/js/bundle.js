@@ -1,6 +1,8 @@
 // import 'jquery'
-import './components/slider'
 import $ from 'jquery' // Include jQuery
+import './components/slider'
+import './components/navigation'
+
 
 // Include jQuery
 // const $ = jQuery;
