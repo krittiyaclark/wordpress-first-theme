@@ -1,0 +1,3 @@
+[submodule "plugins_code/_themename-metaboxes"]
+	path = plugins_code/_themename-metaboxes
+	url = https://github.com/krittiyaclark/wordpress-first-theme.git
