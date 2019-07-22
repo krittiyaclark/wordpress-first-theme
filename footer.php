@@ -3,7 +3,8 @@
         <footer id="footer" role="contentinfo">
             <?php get_template_part( 'template-parts/footer/widgets' ); ?>
             <?php get_template_part( 'template-parts/footer/info' ); ?>
-            <?php wp_footer(); ?>
         </footer>
+
+        <?php wp_footer(); ?>
     </body>
 </html>
