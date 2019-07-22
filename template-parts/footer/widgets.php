@@ -1,7 +1,7 @@
 <?php 
     $footer_layout = '3,3,3,3';
     $columns = explode(',', $footer_layout);
-    $footer_bg = 'dark';
+    $footer_bg = _themename_sanitize_footer_bg(get_theme_mod( '_themename_footer_bg', 'dark' ));
     $widgets_active = false;
     // check if sidebar footer active
     foreach($columns as $i => $column) {
