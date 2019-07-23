@@ -31,6 +31,12 @@ const paths = {
         src: ['src/assets/js/bundle.js', 'src/assets/js/admin.js', 'src/assets/js/customize-preview.js'],
         dest: 'dist/assets/js'
     },
+    plugins: {
+	    src: [
+	      "../../plugins/customeTheme-metaboxes/packaged/*"
+	    ],
+    	dest: ["lib/plugins"]
+  	},
     other: {
         src: ['src/assets/**/*', '!src/assets/{images,js,scss}', '!src/assets/{images,js,scss}/**/*'],
         dest: 'dist/assets'
@@ -96,6 +102,11 @@ export const copy = () => {
         .pipe(gulp.dest(paths.other.dest));
 }
 
+export const copyPlugins = () => {
+	return gulp.src(paths.plugins.src)
+		.pipe(gulp.dest(paths.plugins.dest));
+}
+
 export const scripts = () => {
     return gulp.src(paths.scripts.src)
     .pipe(named())
@@ -134,8 +145,8 @@ export const compress = () => {
         .pipe(zip(`${info.name}.zip`))
         .pipe(gulp.dest(paths.package.dest))
 }
-export const dev = gulp.series(clean, gulp.parallel(styles, scripts, images, copy), serve, watch)
-export const build = gulp.series(clean, gulp.parallel(styles, scripts, images, copy))
-export const bundle = gulp.series(build, compress)
+export const dev = gulp.series(clean, gulp.parallel(styles, scripts, images, copy), serve, watch);
+export const build = gulp.series(clean, gulp.parallel(styles, scripts, images, copy),copyPlugins);
+export const bundle = gulp.series(build,compress);
 
 export default dev 
