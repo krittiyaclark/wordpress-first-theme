@@ -1,21 +1,20 @@
 <?php
 
-// override child theme
-if(!function_exists('_themename_posts_meta')) {
-    function _themename_posts_meta() {
-        /*  translator:: %s Post Date */
-        printf(
-            esc_html__( 'Posted on %s', '_themename'),
-            '<a href="' . esc_url(get_permalink( )) . '"><time datetime="' . esc_attr(get_the_date('c')) . '">' . get_the_date() . '</time></a>'
-        );
-        /* translator: %s: Post Author*/
-        printf(
-            esc_html__(' By %s', '_themename'),
-            '<a href="' . esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) )) . '">' . esc_html(get_the_author( )) . 
-            '</a>'
-        );
-    }
+function _themename_post_meta() {
+    /*  translator:: %s Post Date */
+    printf(
+        esc_html__( 'Posted on %s', '_themename'),
+        '<a href="' . esc_url(get_permalink( )) . '"><time datetime="' . esc_attr(get_the_date('c')) . 
+        '">' . get_the_date() . '</time></a>'
+    );
+    /* translator: %s: Post Author*/
+    printf(
+        esc_html__(' By %s', '_themename'),
+        '<a href="' . esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) )) . '">' . esc_html(get_the_author( )) . 
+        '</a>'
+    );
 }
+
 function _themename_readmore_link() {
     echo '<a class="c-post__readmore" href="' . esc_url(get_permalink()) . '" title="' . the_title_attribute(['echo' => false]) . '">';
     /* tranlators: %s: Post Title */
@@ -44,6 +43,7 @@ function _themename_delete_post() {
         return "<a href='" . esc_url($url) . "'>" . esc_html__( 'Delete Post', '_themename' ) . "</a>";
     }
 }
+
 function _themename_meta( $id, $key, $default ) {
     $value = get_post_meta( $id, $key, true );
     if(!$value && $default) {
