@@ -17,6 +17,7 @@
                         <?php the_post(); ?>
                         
                         <?php get_template_part( 'template-parts/post/content' ); ?>
+                        <?php get_template_part('template-parts/single/author'); ?>
                     
                     <?php } ?>
                 <?php } else { ?>
